@@ -28,7 +28,7 @@ public class SaveMessageJob : IJob
             var dataMap = context.MergedJobDataMap;
             const string message = "Job started...";
             _logger.LogInformation($"[SAVE_MESSAGE_JOB][{context.FireInstanceId}] {message}");
-            var taskIdWasFound = context.MergedJobDataMap.TryGetGuidValue(Constant.TaskId, out taskId);
+            context.MergedJobDataMap.TryGetGuidValue(Constant.TaskId, out taskId);
             var jsonData = dataMap.GetString(Constant.JsonData);
             _logger.LogInformation("[SAVE_MESSAGE_JOB][{ContextFireInstanceId}],task id :[{taskIdWasFound}] data[{JsonData}]", context.FireInstanceId,taskId ,jsonData);
 

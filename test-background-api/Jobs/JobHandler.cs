@@ -15,10 +15,7 @@ public class JobHandler
     public async Task<bool> ScheduleSaveMessageJob(DateTime date,Guid taskId,string jsonData)
     {
         var scheduler = await _schedulerFactoryFactory.GetScheduler();
-        var now = DateTime.Now;
-        var dateTask = date - now;
-        TimeSpan buildTimeSpan = new (dateTask.Days, dateTask.Hours, dateTask.Minutes,dateTask.Seconds);
-      
+        var dateTask =   date - DateTime.Now;
         var jobKey = new JobKey(nameof(SaveMessageJob));
         var triggerKey = new TriggerKey($"{taskId.ToString()}");
         _logger.LogInformation("Log task with info triggerKey:[{S}]", triggerKey.ToString());
@@ -26,7 +23,7 @@ public class JobHandler
         var trigger = TriggerBuilder
             .Create()
             .WithIdentity(triggerKey)
-            .StartAt(DateTimeOffset.Now.Add(buildTimeSpan))
+            .StartAt(DateTimeOffset.Now.Add(dateTask))
             .UsingJobData(Constant.TaskId,taskId)
             .UsingJobData(Constant.JsonData,jsonData)
             .ForJob(jobKey) 
