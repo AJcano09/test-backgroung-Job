@@ -44,6 +44,6 @@ public class SaveMessageJob : IJob
             _logger.LogInformation($"[SAVE_MESSAGE_JOB][{context.FireInstanceId}][{taskId.ToString()}] fail with error:",
                 ex);
         }
-        _logger.LogInformation($"[SAVE_MESSAGE_JOB][{context.FireInstanceId}] Job is finishing succesful...");
+        _logger.LogInformation($"[SAVE_MESSAGE_JOB][{context.FireInstanceId}] Job whit ID[{taskId.ToString()}] was finishing succesful...");
     }
 }

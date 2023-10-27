@@ -33,14 +33,18 @@
       <EmbeddedResource Include="dbContext\Quartz\Migrations\QuartzInit_UP.sql" />
       <EmbeddedResource Remove="obj\**" />
       <None Remove="obj\**" />
+      <EmbeddedResource Remove="test-background-api\**" />
+      <None Remove="test-background-api\**" />
     </ItemGroup>
 
     <ItemGroup>
       <Compile Remove="obj\**" />
+      <Compile Remove="test-background-api\**" />
     </ItemGroup>
 
     <ItemGroup>
       <Content Remove="obj\**" />
+      <Content Remove="test-background-api\**" />
     </ItemGroup>
 
 </Project>
