@@ -31,6 +31,16 @@
     <ItemGroup>
       <None Remove="dbContext\Quartz\Migrations\QuartzInit_UP.sql" />
       <EmbeddedResource Include="dbContext\Quartz\Migrations\QuartzInit_UP.sql" />
+      <EmbeddedResource Remove="obj\**" />
+      <None Remove="obj\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Remove="obj\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Content Remove="obj\**" />
     </ItemGroup>
 
 </Project>
