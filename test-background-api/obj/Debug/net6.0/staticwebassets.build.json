@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "A2DRJMmqQauAN7WPTgqP3VTxwpcsHvw6zqNmSWGbpnY=",
+  "Source": "test-background-api",
+  "BasePath": "_content/test-background-api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="EfCoreDialogsState">
+    <option name="keyValueStorage">
+      <map>
+        <entry key="Common:64f7c664-a66c-48ae-9247-a6234aab9920:dbContext" value="test_background_api.dbContext.Quartz.QuartzDbContext" />
+        <entry key="Common:buildConfiguration" value="Debug" />
+        <entry key="Common:noBuild" value="false" />
+        <entry key="Common:outputFolder" value="dbContext/Quartz/Migrations" />
+      </map>
+    </option>
+  </component>
+</project>
